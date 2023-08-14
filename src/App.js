@@ -1,10 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-
+import MyComponent from './components/MyComponent';
 function App() {
   return (
     <div>
       Hello World
+      <MyComponent></MyComponent>
     </div>
     // <div className="App">
     //   <header className="App-header">
