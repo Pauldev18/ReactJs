@@ -7,6 +7,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import User from './components/User/User';
 import Admin from './components/Admin/Admin';
 import { BrowserRouter, Routes, Route } from "react-router-dom"
+import DashBoard from './components/Admin/DashBoard';
+import AdminUser from './components/Admin/AdminUser';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -15,7 +17,10 @@ root.render(
         <Route path="/" element={ <App/> }>
           <Route path="users" element={ <User/> } />
         </Route>
-        <Route path="admins" element={ <Admin/> } />
+        <Route path="/admins" element={ <Admin/> } >
+          <Route index element={<DashBoard/> }/>
+          <Route path="admin-main" element={ <AdminUser/> } />
+        </Route>
       </Routes>
   </BrowserRouter>
  

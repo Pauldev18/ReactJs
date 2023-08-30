@@ -12,6 +12,7 @@ import {
 } from 'react-pro-sidebar';
 import { FaTachometerAlt, FaGem, FaList, FaGithub, FaRegLaughWink, FaHeart } from 'react-icons/fa';
 import sidebarBg from '../../assets/bg2.jpg';
+import { Link } from 'react-router-dom';
 const SideBar = ({ image, collapsed, toggled, handleToggleSidebar })=>{
   return(
   <>
@@ -46,6 +47,7 @@ const SideBar = ({ image, collapsed, toggled, handleToggleSidebar })=>{
             icon={<FaTachometerAlt />}
           >
             Dashboard
+            <Link to="/admins" />
           </MenuItem>
         </Menu>
         <Menu iconShape="circle">
@@ -53,7 +55,10 @@ const SideBar = ({ image, collapsed, toggled, handleToggleSidebar })=>{
             title='Admin'
             icon={<FaRegLaughWink />}
           >
-            <MenuItem>Quan ly users</MenuItem>
+            <MenuItem>
+            Quan ly users
+            <Link to="/admins/admin-main" />
+            </MenuItem>
             <MenuItem>Quan ly quiz</MenuItem>
             <MenuItem>Quan ly question</MenuItem>
           </SubMenu>
